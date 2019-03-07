@@ -20,7 +20,7 @@ The first gate in the series is called the "Forget Gate".
 
 
 ## Class Diagram
-
+![Image](/LSTM_UML/images/LSTM_Cell_Class_Diagram.jpg?raw=true "Title")
 
 
 ## License
