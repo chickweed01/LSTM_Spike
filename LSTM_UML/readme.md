@@ -6,12 +6,19 @@ In my quest to have a better understanding if how Long Short-Term Memory (LSTM) 
 
 ## The Model
 
-The basic function of an LSTM cell is to determine how much information about the previous cell state to persist in the cell's current data. That determination is made using a series of "gates". A diagram of a typical cell is shown below:
+The basic function of an LSTM cell is to determine how much information about the previous cell state and previous output to persist in the cell's current data. That determination is made using a series of "gates". A diagram of a typical cell is shown below:
 
 ![Image](/LSTM_UML/images/LSTMCell.jpg?raw=true "Title")
+
+
+
 
 
 The first gate in the series is called the "Forget Gate".
 
 ![Image](/LSTM_UML/images/ForgetGateSummations.jpg?raw=true "Title")
 
+
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
