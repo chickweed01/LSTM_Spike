@@ -8,19 +8,22 @@ In my quest to have a better understanding if how Long Short-Term Memory (LSTM) 
 
 The basic function of an LSTM cell is to determine how much information about the previous cell state and previous output to persist in the cell's current data. That determination is made using a series of "gates". A diagram of a typical cell is shown below:
 
-![Image](/LSTM_UML/images/LSTMCell.jpg?raw=true "Title")
+![Image](/LSTM_UML/images/LSTMCell.jpg?raw=true "LSTM Cell")
 
+One approach to modeling an LSTM cell is to treat each gates as its own neural network. The image below shows a neural net for the Forget Gate. The equation for the summations at the Forget Gate is:
 
+f(t) = sigmoid(W*x(t) + U*h(t-1) + b) where:
+* W = input weights
+* U = Output Gate weights
+* x(t) = current inputs
+* h(t-1) = previous outputs
+* b = Forget Gate biases
 
-
-
-The first gate in the series is called the "Forget Gate".
-
-![Image](/LSTM_UML/images/ForgetGateSummations.jpg?raw=true "Title")
+![Image](/LSTM_UML/images/ForgetGateSummations.jpg?raw=true "Forget Gate")
 
 
 ## Class Diagram
-![Image](/LSTM_UML/images/LSTM_Cell_Class_Diagram.jpg?raw=true "Title")
+![Image](/LSTM_UML/images/LSTM_Cell_Class_Diagram.jpg?raw=true "LSTM Cell Class Diagram")
 
 
 ## License
