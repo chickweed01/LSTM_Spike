@@ -19,6 +19,9 @@ The first gate in the series is called the "Forget Gate".
 ![Image](/LSTM_UML/images/ForgetGateSummations.jpg?raw=true "Title")
 
 
+## Class Diagram
+
+![Image](/LSTM_UML/images/ForgetGateSummations.jpg?raw=true "Title")
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
