@@ -110,10 +110,18 @@ namespace LSTM_Spike
           float[][] bf, float[][] bi, float[][] bo, float[][] bc)
         {
             float[][] ft = MatSig(MatSum(MatProd(Wf, xt), MatProd(Uf, h_prev), bf));
+            Console.WriteLine("Forget Gate values: {0}, {1}, {2}", ft[0][0], ft[1][0], ft[2][0]);
+
             float[][] it = MatSig(MatSum(MatProd(Wi, xt), MatProd(Ui, h_prev), bi));
+            Console.WriteLine("Input Gate values: {0}, {1}, {2}", it[0][0], it[1][0], it[2][0]);
+
             float[][] ot = MatSig(MatSum(MatProd(Wo, xt), MatProd(Uo, h_prev), bo));
+            Console.WriteLine("Output Gate values: {0}, {1}, {2}", ot[0][0], ot[1][0], ot[2][0]);
+
             float[][] ct = MatSum(MatHada(ft, c_prev),
               MatHada(it, MatTanh(MatSum(MatProd(Wc, xt), MatProd(Uc, h_prev), bc))));
+            Console.WriteLine("Cell State values: {0}, {1}, {2}", ct[0][0], ct[1][0], ct[2][0]);
+
             float[][] ht = MatHada(ot, MatTanh(ct));
 
             float[][][] result = new float[2][][];
